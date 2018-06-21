@@ -1,0 +1,21 @@
+<launch>  
+
+  <!-- load urdf to Gazebo  -->  
+
+  <include file="$(find slave_gazebo)/launch/slave_world.launch" />     
+  <!-- JointStateController and robot state publisher -->  
+
+  <include file="$(find slave_control)/launch/slave_gazebo_states.launch" />     
+  <!-- ros_control TrajectoryController -->  
+
+  <include file="$(find slave_control)/launch/slave_trajectory_controller.launch" />      
+  <!-- moveit move group -->  
+
+  <include file="$(find slavedarm_config)/launch/moveit_planning_execution.launch" />      
+
+
+<!--
+
+--> 
+  
+</launch> 

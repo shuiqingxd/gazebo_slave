@@ -1,0 +1,9 @@
+<launch>  
+
+	<rosparam file="$(find slave_control)/config/trajectory_control.yaml" command="load"/>  
+	
+	<node name="slave_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/slave" args="slave_joint_controller"/>  
+
+
+</launch>

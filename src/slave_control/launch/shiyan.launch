@@ -1,0 +1,5 @@
+<launch>
+
+	<include file="$(find slavedarm_config)/launch/moveit_planning_execution.launch" /> 
+
+</launch>
